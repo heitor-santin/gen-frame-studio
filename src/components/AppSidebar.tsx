@@ -68,8 +68,10 @@ export function AppSidebar() {
                       end 
                       className={getNavClass}
                     >
-                      <item.icon className="w-5 h-5 shrink-0" />
-                      {!isCollapsed && <span className="font-medium">{item.title}</span>}
+                      <div className="flex items-center gap-2">
+                        <item.icon className="w-5 h-5 shrink-0" />
+                        {!isCollapsed && <span className="font-medium">{item.title}</span>}
+                      </div>
                     </NavLink>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -106,8 +108,10 @@ export function AppSidebar() {
               asChild
             >
               <NavLink to="/settings">
-                <Settings className="w-4 h-4 mr-3" />
-                Configurações
+                <div className="flex items-center">
+                  <Settings className="w-4 h-4 mr-3" />
+                  Configurações
+                </div>
               </NavLink>
             </Button>
           </div>
