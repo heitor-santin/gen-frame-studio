@@ -10,6 +10,7 @@ import Videos from "./pages/Videos";
 import Series from "./pages/Series";
 import SeriesDetail from "./pages/SeriesDetail";
 import CreateSeries from "./pages/CreateSeries";
+import Account from "./pages/Account";
 import ComingSoon from "./pages/ComingSoon";
 import NotFound from "./pages/NotFound";
 
@@ -28,7 +29,7 @@ const App = () => (
           <Route path="/series" element={<Series />} />
           <Route path="/series/:id" element={<SeriesDetail />} />
           <Route path="/create-series" element={<CreateSeries />} />
-          <Route path="/account" element={<ComingSoon />} />
+          <Route path="/account" element={<Account />} />
           <Route path="/settings" element={<ComingSoon />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
