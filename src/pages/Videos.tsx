@@ -99,8 +99,10 @@ export default function Videos() {
             asChild
           >
             <Link to="/create">
-              <Plus className="w-4 h-4 mr-2" />
-              Criar Novo Vídeo
+              <div className="flex items-center">
+                <Plus className="w-4 h-4 mr-2" />
+                Criar Novo Vídeo
+              </div>
             </Link>
           </Button>
         </div>

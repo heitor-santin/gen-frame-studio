@@ -19,7 +19,9 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           <header className="h-16 border-b border-border bg-card px-6 flex items-center lg:hidden">
             <SidebarTrigger asChild>
               <Button variant="ghost" size="icon">
-                <Menu className="w-5 h-5" />
+                <div>
+                  <Menu className="w-5 h-5" />
+                </div>
               </Button>
             </SidebarTrigger>
           </header>

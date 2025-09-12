@@ -119,7 +119,9 @@ export function AppSidebar() {
           <div className="space-y-3">
             <Button variant="ghost" size="icon" asChild>
               <NavLink to="/settings">
-                <Settings className="w-5 h-5 text-sidebar-foreground" />
+                <div>
+                  <Settings className="w-5 h-5 text-sidebar-foreground" />
+                </div>
               </NavLink>
             </Button>
           </div>

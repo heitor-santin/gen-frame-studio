@@ -14,6 +14,8 @@ import {
 import { Link } from "react-router-dom";
 
 export default function Dashboard() {
+  console.log("Dashboard: renderizando component");
+  
   const metrics = [
     {
       title: "Vídeos Criados",
@@ -68,8 +70,10 @@ export default function Dashboard() {
             asChild
           >
             <Link to="/create">
-              <Plus className="w-4 h-4 mr-2" />
-              Criar Novo Vídeo
+              <div className="flex items-center">
+                <Plus className="w-4 h-4 mr-2" />
+                Criar Novo Vídeo
+              </div>
             </Link>
           </Button>
         </div>
@@ -88,7 +92,9 @@ export default function Dashboard() {
             <CardHeader className="flex flex-row items-center justify-between">
               <CardTitle className="text-foreground font-display">Vídeos Recentes</CardTitle>
               <Button variant="ghost" size="sm" asChild>
-                <Link to="/videos">Ver todos</Link>
+                <Link to="/videos">
+                  <span>Ver todos</span>
+                </Link>
               </Button>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -165,8 +171,10 @@ export default function Dashboard() {
               <div className="pt-4 border-t border-border">
                 <Button variant="outline" className="w-full" asChild>
                   <Link to="/analytics">
-                    <TrendingUp className="w-4 h-4 mr-2" />
-                    Ver Análises Detalhadas
+                    <div className="flex items-center justify-center">
+                      <TrendingUp className="w-4 h-4 mr-2" />
+                      Ver Análises Detalhadas
+                    </div>
                   </Link>
                 </Button>
               </div>

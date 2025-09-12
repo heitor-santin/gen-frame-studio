@@ -85,7 +85,9 @@ export default function CreateVideo() {
           <div className="flex items-center space-x-4">
             <Button variant="ghost" size="icon" asChild>
               <Link to="/">
-                <ArrowLeft className="w-4 h-4" />
+                <div>
+                  <ArrowLeft className="w-4 h-4" />
+                </div>
               </Link>
             </Button>
             <div>

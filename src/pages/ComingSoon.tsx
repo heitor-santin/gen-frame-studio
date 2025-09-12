@@ -70,8 +70,10 @@ export default function ComingSoon() {
               
               <Button variant="outline" className="w-full" asChild>
                 <Link to="/">
-                  <ArrowLeft className="w-4 h-4 mr-2" />
-                  Voltar ao Dashboard
+                  <div className="flex items-center justify-center">
+                    <ArrowLeft className="w-4 h-4 mr-2" />
+                    Voltar ao Dashboard
+                  </div>
                 </Link>
               </Button>
             </div>
