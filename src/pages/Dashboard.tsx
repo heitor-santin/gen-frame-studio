@@ -168,10 +168,10 @@ export default function Dashboard() {
 
               <div className="pt-4 border-t border-border">
                 <Button variant="outline" className="w-full" asChild>
-                  <Link to="/analytics">
+                  <Link to="/series">
                     <div className="flex items-center justify-center">
-                      <TrendingUp className="w-4 h-4 mr-2" />
-                      Ver Análises Detalhadas
+                      <PlaySquare className="w-4 h-4 mr-2" />
+                      Ver Minhas Séries
                     </div>
                   </Link>
                 </Button>

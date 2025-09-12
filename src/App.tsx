@@ -7,6 +7,9 @@ import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
 import CreateVideo from "./pages/CreateVideo";
 import Videos from "./pages/Videos";
+import Series from "./pages/Series";
+import SeriesDetail from "./pages/SeriesDetail";
+import CreateSeries from "./pages/CreateSeries";
 import ComingSoon from "./pages/ComingSoon";
 import NotFound from "./pages/NotFound";
 
@@ -22,7 +25,9 @@ const App = () => (
           <Route path="/" element={<Dashboard />} />
           <Route path="/create" element={<CreateVideo />} />
           <Route path="/videos" element={<Videos />} />
-          <Route path="/series" element={<ComingSoon />} />
+          <Route path="/series" element={<Series />} />
+          <Route path="/series/:id" element={<SeriesDetail />} />
+          <Route path="/create-series" element={<CreateSeries />} />
           <Route path="/account" element={<ComingSoon />} />
           <Route path="/settings" element={<ComingSoon />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
