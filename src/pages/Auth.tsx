@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Separator } from "@/components/ui/separator";
-import { Eye, EyeOff, Video, ArrowLeft } from "lucide-react";
+import { Eye, EyeOff, Video } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export default function Auth() {
@@ -27,7 +27,7 @@ export default function Auth() {
     const checkUser = async () => {
       const { data: { session } } = await supabase.auth.getSession();
       if (session) {
-        navigate("/");
+      navigate("/dashboard");
       }
     };
     checkUser();
@@ -49,12 +49,8 @@ export default function Auth() {
         return;
       }
 
-      toast({
-        title: "Login realizado com sucesso!",
-        description: "Bem-vindo de volta.",
-      });
       
-      navigate("/");
+      navigate("/dashboard");
     } catch (err) {
       setError("Erro inesperado. Tente novamente.");
     } finally {
@@ -117,11 +113,6 @@ export default function Auth() {
       <div className="w-full max-w-md space-y-6">
         {/* Header */}
         <div className="text-center space-y-4">
-          <Link to="/" className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Voltar ao início
-          </Link>
-          
           <div className="flex items-center justify-center space-x-2">
             <div className="p-2 bg-primary/10 rounded-lg">
               <Video className="w-6 h-6 text-primary" />
@@ -299,13 +290,13 @@ export default function Auth() {
             <div className="text-center">
               <p className="text-xs text-muted-foreground">
                 Ao criar uma conta, você concorda com nossos{" "}
-                <Link to="#" className="underline hover:text-foreground">
+                <span className="underline">
                   Termos de Uso
-                </Link>
+                </span>
                 {" "}e{" "}
-                <Link to="#" className="underline hover:text-foreground">
+                <span className="underline">
                   Política de Privacidade
-                </Link>
+                </span>
               </p>
             </div>
           </CardContent>
