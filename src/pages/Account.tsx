@@ -12,7 +12,13 @@ import {
   TrendingUp,
   Settings,
   Crown,
-  Zap
+  Zap,
+  Youtube,
+  Instagram,
+  Music,
+  Video,
+  ExternalLink,
+  CheckCircle
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
@@ -189,6 +195,93 @@ export default function Account() {
                 </h3>
                 <p className="text-muted-foreground">{profile?.email}</p>
               </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Social Media Connections */}
+        <Card className="bg-gradient-card border-border">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Video className="w-5 h-5 text-primary" />
+              Redes Sociais Conectadas
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid gap-4 md:grid-cols-2">
+              {/* YouTube */}
+              <div className="flex items-center justify-between p-4 rounded-lg border border-border bg-muted/20">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center">
+                    <Youtube className="w-5 h-5 text-red-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-foreground">YouTube</h4>
+                    <p className="text-xs text-muted-foreground">Canal não conectado</p>
+                  </div>
+                </div>
+                <Button variant="outline" size="sm" className="flex items-center gap-2">
+                  <ExternalLink className="w-3 h-3" />
+                  Conectar
+                </Button>
+              </div>
+
+              {/* Instagram */}
+              <div className="flex items-center justify-between p-4 rounded-lg border border-border bg-muted/20">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                    <Instagram className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-foreground">Instagram</h4>
+                    <p className="text-xs text-muted-foreground">Conta não conectada</p>
+                  </div>
+                </div>
+                <Button variant="outline" size="sm" className="flex items-center gap-2">
+                  <ExternalLink className="w-3 h-3" />
+                  Conectar
+                </Button>
+              </div>
+
+              {/* TikTok */}
+              <div className="flex items-center justify-between p-4 rounded-lg border border-border bg-muted/20">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center">
+                    <Music className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-foreground">TikTok</h4>
+                    <p className="text-xs text-muted-foreground">Perfil não conectado</p>
+                  </div>
+                </div>
+                <Button variant="outline" size="sm" className="flex items-center gap-2">
+                  <ExternalLink className="w-3 h-3" />
+                  Conectar
+                </Button>
+              </div>
+
+              {/* Kwai */}
+              <div className="flex items-center justify-between p-4 rounded-lg border border-border bg-muted/20">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-yellow-500/10 rounded-lg flex items-center justify-center">
+                    <Video className="w-5 h-5 text-yellow-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-foreground">Kwai</h4>
+                    <p className="text-xs text-muted-foreground">Conta não conectada</p>
+                  </div>
+                </div>
+                <Button variant="outline" size="sm" className="flex items-center gap-2">
+                  <ExternalLink className="w-3 h-3" />
+                  Conectar
+                </Button>
+              </div>
+            </div>
+
+            <div className="mt-4 p-3 bg-blue-500/10 rounded-lg border border-blue-500/20">
+              <p className="text-sm text-blue-700 dark:text-blue-300">
+                💡 <strong>Dica:</strong> Conecte suas redes sociais para publicar automaticamente seus vídeos gerados e aumentar seu alcance.
+              </p>
             </div>
           </CardContent>
         </Card>
