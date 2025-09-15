@@ -30,18 +30,18 @@ export default function Dashboard() {
       trend: { value: "12%", isPositive: true }
     },
     {
-      title: "Créditos Restantes",
-      value: "847",
-      description: "Do seu plano atual",
-      icon: CreditCard,
-      trend: { value: "156", isPositive: false }
-    },
-    {
       title: "Créditos Utilizados",
       value: "153",
       description: "Últimos 30 dias",
       icon: TrendingUp,
       trend: { value: "23", isPositive: false }
+    },
+    {
+      title: "Créditos Restantes",
+      value: "847",
+      description: "Do seu plano atual",
+      icon: CreditCard,
+      trend: { value: "156", isPositive: false }
     }
   ];
 

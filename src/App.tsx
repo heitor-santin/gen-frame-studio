@@ -11,6 +11,7 @@ import Series from "./pages/Series";
 import SeriesDetail from "./pages/SeriesDetail";
 import CreateSeries from "./pages/CreateSeries";
 import Account from "./pages/Account";
+import Auth from "./pages/Auth";
 import ComingSoon from "./pages/ComingSoon";
 import NotFound from "./pages/NotFound";
 
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/series/:id" element={<SeriesDetail />} />
           <Route path="/create-series" element={<CreateSeries />} />
           <Route path="/account" element={<Account />} />
+          <Route path="/auth" element={<Auth />} />
           <Route path="/settings" element={<ComingSoon />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
