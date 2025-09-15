@@ -37,11 +37,11 @@ export default function Dashboard() {
       trend: { value: "156", isPositive: false }
     },
     {
-      title: "Total de Visualizações",
-      value: "52.3k",
+      title: "Créditos Utilizados",
+      value: "153",
       description: "Últimos 30 dias",
-      icon: Eye,
-      trend: { value: "18%", isPositive: true }
+      icon: TrendingUp,
+      trend: { value: "23", isPositive: false }
     }
   ];
 
