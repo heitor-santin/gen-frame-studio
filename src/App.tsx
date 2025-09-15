@@ -12,7 +12,6 @@ import SeriesDetail from "./pages/SeriesDetail";
 import CreateSeries from "./pages/CreateSeries";
 import Account from "./pages/Account";
 import Auth from "./pages/Auth";
-import ComingSoon from "./pages/ComingSoon";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,7 +31,7 @@ const App = () => (
           <Route path="/create-series" element={<CreateSeries />} />
           <Route path="/account" element={<Account />} />
           <Route path="/auth" element={<Auth />} />
-          <Route path="/settings" element={<ComingSoon />} />
+          <Route path="/settings" element={<div className="p-8 text-center">Configurações em desenvolvimento</div>} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
